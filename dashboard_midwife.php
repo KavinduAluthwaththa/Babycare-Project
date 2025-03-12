@@ -30,7 +30,7 @@ $vaccinations = $conn->query("
 <body>
     <div class="dashboard-container">
         <div class="dashboard-header">
-            <h2>Welcome, Midwife <?php echo $_SESSION['name']; ?>!</h2>
+            <h2>Welcome, <?php echo $_SESSION['name']; ?>!</h2>
             <img src="<?php echo $_SESSION['profile_picture']; ?>" alt="Profile Picture" class="profile-picture">
         </div>
 
