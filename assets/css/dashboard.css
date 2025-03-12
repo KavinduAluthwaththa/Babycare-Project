@@ -1,0 +1,114 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    max-width: 900px;
+    background: #fff;
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: 0px 15px 16.83px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.dashboard-header h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6dabe4;
+}
+
+/* Sections */
+.dashboard-section {
+    margin-top: 30px;
+}
+
+.dashboard-section h3 {
+    font-size: 20px;
+    color: #6dabe4;
+    border-bottom: 2px solid #6dabe4;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Card Layout */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    width: calc(50% - 10px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Logout Button */
+.dashboard-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logout-button {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+    background: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        width: calc(100% - 30px);
+    }
+
+    .card {
+        width: 100%;
+    }
+}
