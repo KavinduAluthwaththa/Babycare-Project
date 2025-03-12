@@ -112,3 +112,170 @@ body {
         width: 100%;
     }
 }
+
+/* Add Child Button */
+.add-child-button {
+    background: #6dabe4;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+}
+
+.add-child-button:hover {
+    background: #4292dc;
+}
+
+/* Form Styling */
+.form-container {
+    max-width: 500px;
+    background: #fff;
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: 0px 15px 16.83px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #6dabe4;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px 35px;
+    border: none;
+    border-bottom: 2px solid #999;
+    background: transparent;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-bottom: 2px solid #6dabe4;
+    outline: none;
+}
+
+.form-submit {
+    background: #6dabe4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-submit:hover {
+    background: #4292dc;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    color: #6dabe4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+/* History Button */
+.history-button {
+    background: #6dabe4;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.history-button:hover {
+    background: #4292dc;
+}
+
+/* Vaccination Status Styling */
+.status-completed {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    color: #6dabe4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+/* Vaccination Status Styling */
+.status-completed {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Due Date Styling */
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Delete Button */
+.delete-button {
+    background: #e74c3c;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+    background: #c0392b;
+}
+
+

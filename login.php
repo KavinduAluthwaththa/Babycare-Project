@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
 <body>
 
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="Images/LoginPage.png" alt="sign in image"></figure>
+                        <figure><img src="assets/img/LoginPage.png" alt="sign in image"></figure>
                         <a href="register.php" class="signup-image-link">Create an account</a>
                     </div>
 
