@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Register | Baby Care System</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/style.css">
