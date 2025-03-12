@@ -43,9 +43,11 @@ $babies = $conn->query("SELECT * FROM Babies WHERE mother_id = $user_id");
         </div>
 
         <div class="dashboard-footer">
+            <a href="edit_profile.php" class="add-child-button">Edit Profile</a>
             <a href="add_child.php" class="add-child-button">Add Child</a>
             <a href="logout.php" class="logout-button">Logout</a>
         </div>
+
     </div>
 </body>
 </html>

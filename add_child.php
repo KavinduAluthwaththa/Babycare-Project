@@ -4,7 +4,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] != 'Mother') {
     header("Location: login.php");
     exit;
 }
-include 'DBcon.php';
+include 'DBcon.php';  
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $baby_name = mysqli_real_escape_string($conn, $_POST['baby_name']);
@@ -47,6 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Child</title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="assets/css/dashboard.css">
 </head>
 <body>
