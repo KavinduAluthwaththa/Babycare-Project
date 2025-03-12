@@ -278,4 +278,19 @@ body {
     background: #c0392b;
 }
 
+/* Administer Button */
+.administer-button {
+    background: #2ecc71;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.administer-button:hover {
+    background: #27ae60;
+}
 

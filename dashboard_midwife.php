@@ -9,13 +9,13 @@ include 'DBcon.php';
 // Fetch all mothers
 $mothers = $conn->query("SELECT * FROM Users WHERE user_type='Mother'");
 
-// Fetch upcoming vaccinations
+// Fetch upcoming vaccinations (within the next 7 days)
 $vaccinations = $conn->query("
-    SELECT B.name AS baby_name, V.name AS vaccine_name, VR.vaccination_date 
+    SELECT VR.record_id, B.name AS baby_name, V.name AS vaccine_name, VR.due_date 
     FROM VaccinationRecords VR
     JOIN Babies B ON VR.baby_id = B.baby_id
     JOIN Vaccinations V ON VR.vaccine_id = V.vaccine_id
-    WHERE VR.status = 'Pending'
+    WHERE VR.status = 'Pending' AND VR.due_date <= CURDATE() + INTERVAL 30 DAY
 ");
 ?>
 
@@ -53,7 +53,11 @@ $vaccinations = $conn->query("
                     <div class="card">
                         <h4><?php echo $row['baby_name']; ?></h4>
                         <p>Vaccine: <?php echo $row['vaccine_name']; ?></p>
-                        <p>Date: <?php echo $row['vaccination_date']; ?></p>
+                        <p>Date: <?php echo $row['due_date']; ?></p>
+                        <a href="mark_administered.php?record_id=<?php echo $row['record_id']; ?>" class="administer-button" 
+                           onclick="return confirm('Are you sure you want to mark this vaccine as administered?');">
+                            Mark as Administered
+                        </a>
                     </div>
                 <?php } ?>
             </div>
