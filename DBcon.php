@@ -1,18 +1,14 @@
 <?php
+$servername = "localhost"; 
+$username = "root"; 
+$password = "18602"; 
+$database = "BabyCareSystem";
 
-$sname= "localhost";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
 
-$unmae= "root";
-
-$password = "";
-
-$db_name = "babycare";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
-
-if (!$conn) {
-
-    echo "Connection failed!";
-
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>
