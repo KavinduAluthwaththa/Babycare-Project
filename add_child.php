@@ -46,37 +46,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Child</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register | Baby Care System</title>
+
     <!-- Font Icon -->
     <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Add Child</h2>
-        <form method="POST">
-            <div class="form-group">
-                <label for="baby_name"><i class="zmdi zmdi-account"></i></label>
-                <input type="text" name="baby_name" id="baby_name" placeholder="Child's Name" required />
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign Up</h2>
+                        <form method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="baby_name" id="baby_name" placeholder="Child's Name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-calendar"></i></label>
+                                <input type="date" name="dob" id="dob" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="user_type"><i class="zmdi zmdi-account-box"></i></label>
+                                <select name="gender" id="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+
+                            <div class="form-group form-button">
+                                <a href="dashboard_mother.php" class="back-button">Back to Dashboard</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="assets/img/ChildReg.png" alt="Sign up image"></figure>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="dob"><i class="zmdi zmdi-calendar"></i></label>
-                <input type="date" name="dob" id="dob" required />
-            </div>
-            <div class="form-group">
-                <label for="gender"><i class="zmdi zmdi-male-female"></i></label>
-                <select name="gender" id="gender" required>
-                    <option value="" disabled selected>Select Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="form-group form-button">
-                <button type="submit" class="form-submit">Add Child</button>
-            </div>
-        </form>
-        <a href="dashboard_mother.php" class="back-button">Back to Dashboard</a>
+        </section>
     </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
