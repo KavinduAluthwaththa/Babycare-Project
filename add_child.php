@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Sign Up</h2>
+                        <h2 class="form-title">Add Child</h2>
                         <form method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -85,14 +85,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
                             </div>
-
-                            <div class="form-group form-button">
-                                <a href="dashboard_mother.php" class="back-button">Back to Dashboard</a>
-                            </div>
                         </form>
                     </div>
                     <div class="signup-image">
-                        <figure><img src="assets/img/ChildReg.png" alt="Sign up image"></figure>
+                        <figure><img src="assets/img/Option.png" alt="Sign up image" style="border-radius :50%"></figure>
+                        <a href="dashboard_mother.php" class="signup-image-link">Back</a>
                     </div>
                 </div>
             </div>
