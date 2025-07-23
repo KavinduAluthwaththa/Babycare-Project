@@ -10,7 +10,7 @@ if (isset($_GET['record_id'])) {
     $record_id = $_GET['record_id'];
 
     // Update vaccination record status and set vaccination date to today
-    $sql = "UPDATE VaccinationRecords SET status = 'Completed', vaccination_date = CURDATE() WHERE record_id = $record_id";
+    $sql = "UPDATE vaccinationrecords SET status = 'Completed', vaccination_date = CURDATE() WHERE record_id = $record_id";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: dashboard_midwife.php?success=marked");

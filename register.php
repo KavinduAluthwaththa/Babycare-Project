@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    $sql = "INSERT INTO Users (name, email, password_hash, user_type, profile_picture) 
+    $sql = "INSERT INTO users (name, email, password_hash, user_type, profile_picture) 
             VALUES ('$name', '$email', '$password', '$user_type', '$profile_picture')";
 
     if ($conn->query($sql) === TRUE) {

@@ -10,7 +10,7 @@ $user_id = $_SESSION['user_id'];
 $user_type = $_SESSION['user_type']; // Get user type
 
 // Fetch current user details
-$user_result = $conn->query("SELECT * FROM Users WHERE user_id = $user_id");
+$user_result = $conn->query("SELECT * FROM users WHERE user_id = $user_id");
 $user = $user_result->fetch_assoc();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Update user details
-    $sql = "UPDATE Users SET name='$name', email='$email', contact_number='$contact', profile_picture='$target_file' WHERE user_id=$user_id";
+    $sql = "UPDATE users SET name='$name', email='$email', contact_number='$contact', profile_picture='$target_file' WHERE user_id=$user_id";
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['name'] = $name; // Update session name

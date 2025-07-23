@@ -7,14 +7,14 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] != 'Midwife') {
 include 'DBcon.php';
 
 // Fetch all mothers
-$mothers = $conn->query("SELECT * FROM Users WHERE user_type='Mother'");
+$mothers = $conn->query("SELECT * FROM users WHERE user_type='Mother'");
 
 // Fetch upcoming vaccinations (within the next 7 days)
 $vaccinations = $conn->query("
     SELECT VR.record_id, B.name AS baby_name, V.name AS vaccine_name, VR.due_date 
-    FROM VaccinationRecords VR
-    JOIN Babies B ON VR.baby_id = B.baby_id
-    JOIN Vaccinations V ON VR.vaccine_id = V.vaccine_id
+    FROM vaccinationrecords VR
+    JOIN babies B ON VR.baby_id = B.baby_id
+    JOIN vaccinations V ON VR.vaccine_id = V.vaccine_id
     WHERE VR.status = 'Pending' AND VR.due_date <= CURDATE() + INTERVAL 30 DAY
 ");
 ?>
