@@ -13,13 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mother_id = $_SESSION['user_id'];
 
     // Insert child into Babies table
-    $sql = "INSERT INTO Babies (name, dob, gender, mother_id) VALUES ('$baby_name', '$dob', '$gender', '$mother_id')";
+    $sql = "INSERT INTO babies (name, dob, gender, mother_id) VALUES ('$baby_name', '$dob', '$gender', '$mother_id')";
 
     if ($conn->query($sql) === TRUE) {
         $baby_id = $conn->insert_id; // Get the new baby's ID
 
         // Fetch all vaccines and schedule them based on DOB
-        $vaccines = $conn->query("SELECT vaccine_id, recommended_age FROM Vaccinations");
+        $vaccines = $conn->query("SELECT vaccine_id, recommended_age FROM vaccinations");
 
         while ($vaccine = $vaccines->fetch_assoc()) {
             $vaccine_id = $vaccine['vaccine_id'];

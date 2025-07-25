@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($conn, $_POST['your_name']);
     $password = $_POST['your_pass'];
 
-    $sql = "SELECT * FROM Users WHERE email='$email'";
+    $sql = "SELECT * FROM users WHERE email='$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {

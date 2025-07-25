@@ -9,14 +9,14 @@ include 'DBcon.php';
 $baby_id = $_GET['baby_id'];
 
 // Fetch baby details
-$baby_result = $conn->query("SELECT * FROM Babies WHERE baby_id = $baby_id");
+$baby_result = $conn->query("SELECT * FROM babies WHERE baby_id = $baby_id");
 $baby = $baby_result->fetch_assoc();
 
 // Fetch vaccination history
 $vaccinations = $conn->query("
     SELECT V.name AS vaccine_name, VR.vaccination_date, VR.due_date, VR.status 
-    FROM VaccinationRecords VR
-    JOIN Vaccinations V ON VR.vaccine_id = V.vaccine_id
+    FROM vaccinationrecords VR
+    JOIN vaccinations V ON VR.vaccine_id = V.vaccine_id
     WHERE VR.baby_id = $baby_id
 ");
 ?>

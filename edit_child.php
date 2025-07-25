@@ -10,7 +10,7 @@ $baby_id = $_GET['baby_id'];
 $mother_id = $_SESSION['user_id'];
 
 // Fetch child's details
-$baby_result = $conn->query("SELECT * FROM Babies WHERE baby_id = $baby_id AND mother_id = $mother_id");
+$baby_result = $conn->query("SELECT * FROM babies WHERE baby_id = $baby_id AND mother_id = $mother_id");
 $baby = $baby_result->fetch_assoc();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = mysqli_real_escape_string($conn, $_POST['gender']);
 
     // Update child's details
-    $sql = "UPDATE Babies SET name='$name', dob='$dob', gender='$gender' WHERE baby_id=$baby_id";
+    $sql = "UPDATE babies SET name='$name', dob='$dob', gender='$gender' WHERE baby_id=$baby_id";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: dashboard_mother.php?success=child_updated");
